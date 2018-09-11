@@ -1,16 +1,16 @@
 <template>
   <Menu mode="horizontal"  active-name="1">
-    <span class="nav-name">Feng's Home</span>
+    <span class="nav-name"><router-link to="/">Feng</router-link></span>
     <MenuItem name="1" >
-      <Icon class="icon-size" type="ios-planet" />
-      首&nbsp; 页
+      <Icon class="icon-size" type="md-apps" />
+      分&nbsp; 类
     </MenuItem>
     <MenuItem name="2" to="/a">
       <Icon class="icon-size" type="md-pricetag" />
       标&nbsp; 签
     </MenuItem>
     <MenuItem name="3">
-      <Icon class="icon-size" type="md-apps" />
+      <Icon class="icon-size" type="ios-albums" />
       归&nbsp; 档
     </MenuItem>
     <Submenu name="4">
@@ -40,49 +40,68 @@ export default {
 <style scoped>
 .nav-name {
   float: left;
-  height: 100%;
-  line-height: 2.5em;
-  font-size: 1.5em;
-  margin: 0 1em;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 0.8rem;
+  font-family: "Times New Roman", Serif;
+  text-shadow: -1px 1px 2px #006;
+}
+.nav-name:first-letter {
+  color: #0054ff;
+  font-size: 1.8rem;
+}
+a, a:hover {
+  color: inherit;
 }
 .icon-size {
-  font-size: 1.5em
+  font-size: 1rem
+}
+.ivu-menu-horizontal.ivu-menu-light:after {
+  display: none;
+}
+.ivu-menu-horizontal {
+  height: 3.2rem;
+  line-height: 3.2rem;
+}
+.ivu-menu-light {
+  background: none
+}
+.ivu-menu-horizontal.ivu-menu-light:after {
+  height: 2px;
+  background: #D5D5D5;
+  box-shadow: 0 0.001rem 0.001rem gray;
+}
+.ivu-menu-light.ivu-menu-horizontal .ivu-menu-item, .ivu-menu-light.ivu-menu-horizontal .ivu-menu-submenu {
+  height: 2.6rem;
+  margin-top: 0.6rem;
+  line-height: 2.6rem;
+  width: 5.5rem;
+  padding: 0
+}
+.ivu-menu-light.ivu-menu-horizontal .ivu-menu-submenu,
+.ivu-menu-light.ivu-menu-horizontal .ivu-menu-submenu .ivu-menu-item {
+  width: 7rem
+}
+.ivu-menu-light.ivu-menu-horizontal .ivu-menu-item-active, .ivu-menu-light.ivu-menu-horizontal
+.ivu-menu-item:hover, .ivu-menu-light.ivu-menu-horizontal .ivu-menu-submenu-active,
+.ivu-menu-light.ivu-menu-horizontal .ivu-menu-submenu:hover.ivu-menu-light.ivu-menu-horizontal
+.ivu-menu-submenu .ivu-menu-drop-list .ivu-menu-item {
+  color: #0054ff
+}
+.ivu-menu-horizontal .ivu-menu-item, .ivu-menu-horizontal .ivu-menu-submenu {
+  font-size: 0.9rem;
+  font-weight: bold
+}
+.ivu-menu-horizontal .ivu-menu-submenu .ivu-select-dropdown .ivu-menu-item {
+  font-size: 0.9rem !important;
+  font-weight: normal;
+  margin: 0 auto;
 }
 </style>
 <style>
-  .ivu-menu-horizontal {
-    height: 3.6em;
-    line-height: 3.6em;
-  }
-  .ivu-menu-horizontal.ivu-menu-light:after {
-    height: 1px;
-    background: #D5D5D5;
-    box-shadow: 0 0.001em 0.001em gray;
-  }
-  .ivu-menu-horizontal .ivu-menu-item, .ivu-menu-horizontal .ivu-menu-submenu {
-    font-size: 1em;
-    font-weight: bold;
-  }
-  .ivu-menu-horizontal .ivu-menu-submenu .ivu-select-dropdown .ivu-menu-item
-  , .ivu-menu-item-group-title{
-    font-size: 1em !important;
-  }
-  .ivu-menu-light.ivu-menu-horizontal .ivu-menu-item, .ivu-menu-light.ivu-menu-horizontal .ivu-menu-submenu {
-    height: 3.2em;
-    margin: 0.4em 0.3em 0 0.3em;
-    line-height: 3em;
-    width: 8em;
-  }
-  .ivu-menu-light.ivu-menu-horizontal .ivu-menu-submenu {
-    width: 10.5em
-  }
   .ivu-menu-item-group-title {
+    font-weight: normal;
     float: left;
-    padding-left: 1em;
-  }
-  .ivu-menu-light.ivu-menu-horizontal .ivu-menu-item-active {
-    border: #D5D5D5 0.1em solid;
-    border-bottom: white 2px solid;
-    border-radius: 10% 10% 0 0 / 30% 30%;
+    margin-left: 0.5rem;
   }
 </style>

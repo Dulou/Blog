@@ -1,6 +1,10 @@
 <template>
   <Menu mode="horizontal"  active-name="1">
     <span class="nav-name"><router-link to="/">Feng</router-link></span>
+    <MenuItem name="0" >
+      <Icon class="icon-size" type="logo-windows" />
+      首  页
+    </MenuItem>
     <MenuItem name="1" >
       <Icon class="icon-size" type="md-apps" />
       分&nbsp; 类
@@ -13,19 +17,23 @@
       <Icon class="icon-size" type="ios-albums" />
       归&nbsp; 档
     </MenuItem>
-    <Submenu name="4">
+    <MenuItem name="4">
+      <Icon class="icon-size" type="ios-contact" />
+      关 于
+    </MenuItem>
+    <Submenu name="5">
       <template slot="title">
         <Icon class="icon-size" type="ios-home" />
         House
       </template>
       <MenuGroup title="使用">
-        <MenuItem name="4-1">新增和启动</MenuItem>
-        <MenuItem name="4-2">活跃分析</MenuItem>
-        <MenuItem name="4-3">时段分析</MenuItem>
+        <MenuItem name="5-1">新增和启动</MenuItem>
+        <MenuItem name="5-2">活跃分析</MenuItem>
+        <MenuItem name="5-3">时段分析</MenuItem>
       </MenuGroup>
       <MenuGroup title="留存">
-        <MenuItem name="4-4">用户留存</MenuItem>
-        <MenuItem name="4-5">流失用户</MenuItem>
+        <MenuItem name="5-4">用户留存</MenuItem>
+        <MenuItem name="5-5">流失用户</MenuItem>
       </MenuGroup>
     </Submenu>
   </Menu>
@@ -43,7 +51,7 @@ export default {
   font-size: 1.5rem;
   font-weight: bold;
   margin: 0 0.8rem;
-  font-family: "Times New Roman", Serif;
+  font-family: "Times New Roman",serif;
   text-shadow: -1px 1px 2px #006;
 }
 .nav-name:first-letter {

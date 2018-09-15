@@ -16,6 +16,8 @@
   "dependencies": {
     "iview": "^3.1.0",
     "vue": "^2.5.2",
+    "vue-awesome": "^3.1.2",
+    "vue-canvas-nest": "^2.0.0",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

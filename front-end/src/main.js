@@ -5,10 +5,12 @@ import App from './App'
 import router from './router'
 import iView from 'iview'
 import 'iview/dist/styles/iview.css'
+import vueCanvasNest from 'vue-canvas-nest'
 
 Vue.config.productionTip = false
 
 Vue.use(iView)
+Vue.component('vue-canvas-next', vueCanvasNest)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

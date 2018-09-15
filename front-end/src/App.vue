@@ -1,9 +1,10 @@
 <template>
   <div id="app">
-    <Layout :style="{minHeight: '100vh'}">
-      <Button style="position: fixed; top: 20rem; z-index: 100" @click="showAside" type="primary">Open</Button>
-      <Sider ref="side1" hide-trigger collapsible :collapsed-width="0" v-model="isCollapsed">
-        <sider-content />
+    <!--<vue-canvas-next el="#page"></vue-canvas-next>-->
+    <Layout id="page" :style="{minHeight: '100vh'}">
+      <Button style="position: fixed; top: 35rem; z-index: 100" @click="showAside" type="primary">Open</Button>
+      <Sider ref="side1" width="250" hide-trigger collapsible :collapsed-width="0" v-model="isCollapsed">
+        <sider-content :ifCollapsed="isCollapsed" />
       </Sider>
       <Layout>
         <Header>
@@ -29,12 +30,13 @@ export default {
   },
   data () {
     return {
-      isCollapsed: false
+      isCollapsed: true
     }
   },
   methods: {
     showAside () {
       this.$refs.side1.toggleCollapse()
+      console.log(this.isCollapsed)
     }
   }
 }
@@ -42,7 +44,7 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

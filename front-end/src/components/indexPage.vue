@@ -7,6 +7,9 @@
         <h2 class="index-info"> {{info}} </h2>
       </div>
     </div>
+    <div class="index-current-article">
+      最近文章
+    </div>
     <div style="height: 1000px"></div>
   </div>
 </template>
@@ -49,5 +52,28 @@ export default {
 .index-info {
   padding-left: 20rem;
   color: yellow;
+}
+.index-current-article {
+  position: relative;
+  margin: 1.5rem 0;
+  font-size: 1.5rem;
+  letter-spacing: 12px;
+  color: #4c82f9;
+  height: 3.8rem;
+  line-height: 3.8rem;
+}
+.index-current-article:before, .index-current-article:after {
+  content: "";
+  position: absolute;
+  background-color: #0aa344;
+  height: 2px;
+  width: 7%;
+  left: 46%;
+}
+.index-current-article:after {
+  bottom: 0;
+}
+.index-current-article:before {
+  top: 0;
 }
 </style>

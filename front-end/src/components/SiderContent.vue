@@ -8,7 +8,7 @@
       <h1 class="margin-top">{{name}}</h1>
       <h3 class="normal-weight margin-bottom"> {{individualSig}} </h3>
       <div class="post-info-disp margin-bottom no-background">
-        <router-link v-for="info in postInfo" :key="info" :to="info.path" class="post-info-item">
+        <router-link v-for="(info,index) in postInfo" :key="index" :to="info.path" class="post-info-item">
           <span class="post-info-item-num">{{info.num}}</span>
           <span class="post-info-item-name">{{info.name}}</span>
         </router-link>

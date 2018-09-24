@@ -10,13 +10,21 @@
     <div class="index-current-article">
       最近文章
     </div>
+    <div>
+      <index-item></index-item>
+      <index-item></index-item>
+    </div>
     <div style="height: 1000px"></div>
   </div>
 </template>
 
 <script>
+import indexItem from '@/components/indexItem'
 export default {
   name: 'indexPage',
+  components: {
+    indexItem
+  },
   data () {
     return {
       msg1: '莫负平生意',
